@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wgjrouter">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!--蒲公英，Android8.0所需-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize|keyboardHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.samba.single.Single"/>
+        <activity android:name=".VideoPlayVTM"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeVideo"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".SettingHollRouterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SettingSuperRouterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AboutApp"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WebShow"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RouterSetWiFiPwd"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RouterSetRepeater"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RouterSetWan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RouterDevices"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RouterStatus"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SettingAppActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FunnyLiveActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupGridViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupListViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupFilesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupAudioActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupWechatActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupAppActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupMsgActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupPhoneActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BackupContactActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FunnyLiveRecorderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FunnyLiveCollectActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FileTransFinish"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RemoteFileActivity"
+            android:screenOrientation="portrait"/>
+
+        <!--多线程下载服务-->
+        <service android:name="com.example.samba.MultiDownloadService"/>
+        <service android:name="com.example.samba.MultiRemoteDownloadService"/>
+
+        <!--Vitamio播放器-->
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <!--蒲公英-->
+        <provider
+            android:authorities="${applicationId}.com.pgyer.provider"
+            android:name="com.pgyersdk.PgyerProvider"
+            android:exported="false"/>
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="df556684a9a5f852d68088fe3704f522" >
+        </meta-data>
+        
+        <!--APP调用系统-->
+        <provider
+            android:authorities="com.example.wgjrouter.FileProvider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+
+</manifest>

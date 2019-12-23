@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="FileTransDB"/>
+    <version value="10"/>
+
+    <list>
+        <mapping class="com.example.database.FileTrans"/>
+        <mapping class="com.example.database.LiveVideoList"/>
+        <mapping class="com.example.bean.TaskInfo"/>
+        <mapping class="com.example.bean.ThreadInfo"/>
+    </list>
+</litepal>

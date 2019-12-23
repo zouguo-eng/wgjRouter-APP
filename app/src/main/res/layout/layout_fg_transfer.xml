@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/fg_transfer_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="传输"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/fg_transfer_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/isfinish"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/fg_transfer_tl"
+            app:tabMinWidth="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fg_transfer_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <com.ddz.floatingactionbutton.FloatingActionMenu
+        android:id="@+id/fl_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="5dp"
+        app:fab_addButton_collapsed_rotation="0"
+        app:fab_addButton_expanded_rotation="45"
+        app:fab_addButton_rotation_duration="800"
+        app:fab_labelsPosition="left"
+        app:fab_labelStyle="@style/floating_lable_style">
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fl_menu_button_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_title="全部开始"
+            app:fab_icon="@mipmap/playvideo"/>
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fl_menu_button_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_size="mini"
+            app:fab_title="全部暂停"
+            app:fab_icon="@mipmap/pausevideo"/>
+    </com.ddz.floatingactionbutton.FloatingActionMenu>
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/live_menu_query"
+        android:title="查询"
+        android:icon="@mipmap/icon_search"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/live_menu_collect"
+        android:title="收藏夹"
+        android:icon="@mipmap/collect"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/live_menu_recorder"
+        android:title="播放记录"
+        android:icon="@mipmap/recoder"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/live_menu_reback"
+        android:title="重新初始化"
+        android:icon="@mipmap/reback"
+        app:showAsAction="never"/>
+</menu>

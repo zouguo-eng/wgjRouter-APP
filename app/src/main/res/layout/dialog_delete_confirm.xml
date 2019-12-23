@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_delete_confirm_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#339BFF"
+        android:text="标题"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"/>
+    <TextView
+        android:id="@+id/dialog_delete_confirm_content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="内容"
+        android:textSize="15sp"
+        android:maxLines="10" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right">
+
+        <Button
+            android:id="@+id/dialog_delete_confirm_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:textColor="#FF808B"
+            android:text="确定"/>
+        <Button
+            android:id="@+id/dialog_delete_confirm_no_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:textColor="#FF4D5D"
+            android:text="取消"/>
+    </LinearLayout>
+</LinearLayout>

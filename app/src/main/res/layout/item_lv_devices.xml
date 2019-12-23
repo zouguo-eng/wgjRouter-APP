@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_tv_devname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="设备名"
+                android:textColor="#5C5C5C"/>
+            <TextView
+                android:id="@+id/item_tv_devip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备IP"/>
+            <TextView
+                android:id="@+id/item_tv_devmac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备MAC"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#CBCBCB" />
+
+        <ImageView
+            android:id="@+id/item_iv_devaccnet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#CBCBCB" />
+
+        <ImageView
+            android:id="@+id/item_iv_devaccsha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#CBCBCB" />
+
+        <ImageView
+            android:id="@+id/item_iv_devbindmac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>

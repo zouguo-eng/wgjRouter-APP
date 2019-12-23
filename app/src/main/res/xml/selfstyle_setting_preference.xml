@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="路由器相关">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="wifi_default_config"
+            android:title="默认路由器：Holl"
+            android:summary="选中代表文件默认从Holl读取" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="default_resolver_inner"
+            android:title="默认内部解析"
+            android:summary="查看视频等资源使用APP内解析器"/>
+        <CheckBoxPreference
+            android:key="protect_ear_volume"
+            android:title="音量保护"
+            android:summary="防止误操作，视频音量过大" />
+        <EditTextPreference
+            android:enabled="false"
+            android:key="ideal_ear_volume"
+            android:title="最大音量"
+            android:summary="整数(0-100)，调节视频音量时无法突破该值"
+            android:inputType="number"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="传输相关">
+        <EditTextPreference
+            android:key="max_concurrent_task"
+            android:title="最大同时任务数"
+            android:defaultValue="3"
+            android:summary="同时上传/下载的最大任务数(1-10，默认:3)"
+            android:enabled="false"/>
+        <CheckBoxPreference
+            android:key="override_destfile"
+            android:title="覆盖传输"
+            android:defaultValue="true"
+            android:summary="覆盖掉目标文件夹下已有的文件"/>
+    </PreferenceCategory>
+</PreferenceScreen>

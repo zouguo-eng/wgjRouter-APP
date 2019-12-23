@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">微管家</string>
+    <string name="title_bottom_file">文件</string>
+    <string name="title_bottom_transfer">传输</string>
+    <string name="title_bottom_home">我</string>
+
+    <string name="file_option_operate">编辑</string>
+    <string name="file_option_upload">上传文件</string>
+    <string name="file_option_newfolder">新建文件夹</string>
+    <string name="file_counts">统计数量</string>
+    <string name="file_option_backroot">回根目录</string>
+    <string name="change_router">切换路由器</string>
+    <string name="fresh">刷新</string>
+    <string name="notice">版权说明:\n1.图标素材取自阿里素材库、原微路由app;\n2.直播源收集自《公众号:摄影分享之家》\n\n隐私承诺:\n1.本App(下文中，本APP、本软件均代表此微管家)基于Samba协议从微路由拿取数据，网络环境在局域即可(非必须桥接)，承诺不会私自存储用户数据，因网络环境不良、硬盘供电不足，App无法做出正确的响应时，本软件不承担任何责任;\n2.本软件可自由分享、使用，但不可用于反编译、嵌入恶意代码，此软件无任何功能限制行为，请务必使用原版APP，对于使用盗版APP所造成的文件勒索，本软件不承担任何责任;\n3.本软件仅供查看、操作微路由下挂载的存储设备中的文件，不具备从其它位置获取数据的能力，同时不具有向其它位置上送数据的能力，需自备(汇尔微管家Vpod M1)硬件设备;\n\n功能说明:\n1.本软件供用户可以快速方便的查看微路由下挂载硬盘、U盘、SD卡里的内容，功能包含但不限于:图片的小图预览、大图查看、视频观看、文档查看，新建文件夹、上传本地文件、下载微路由文件、查看微路由状态;</string>
+    
+    <string-array name="entries_str_mount_type">
+        <item>mnt</item>
+        <item>media</item>
+    </string-array>
+    <string-array name="entries_values_mount_type">
+        <item>mnt</item>
+        <item>media</item>
+    </string-array>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/trans_finish_onlydown"
+        android:title="仅下载"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/trans_finish_clear"
+        android:title="清空所有记录"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/trans_finish_deleteall"
+        android:title="删空下载文件"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_with_et_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#339BFF"
+        android:text="标题"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"/>
+    <EditText
+        android:id="@+id/dialog_with_et_input_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:hint="请输入..."
+        android:lines="1"
+        android:maxLines="1"
+        android:inputType="text"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right">
+
+        <Button
+            android:id="@+id/dialog_with_et_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:textColor="#FF808B"
+            android:text="确定"/>
+        <Button
+            android:id="@+id/dialog_with_et_no_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:textColor="#FF4D5D"
+            android:text="取消"/>
+    </LinearLayout>
+</LinearLayout>

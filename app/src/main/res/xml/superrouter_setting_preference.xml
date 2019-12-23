@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="基础配置(必须)">
+        <EditTextPreference
+            android:key="gateway_config"
+            android:title="网关配置"
+            android:summary="用于内网观看视频、查看图片"
+            android:hint="格式：192.168.1.1"/>
+        <EditTextPreference
+            android:key="samba_config"
+            android:title="网络共享"
+            android:summary="用于内网下载文件，需先进SSH新增账号"
+            android:hint="格式：用户名:密码"/>
+        <EditTextPreference
+            android:key="link_diskdir_config"
+            android:title="软链接名"
+            android:summary="用于访问路由器挂载的硬盘文件"
+            android:hint="格式：filelist"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="高级配置">
+        <EditTextPreference
+            android:key="penetration_config"
+            android:title="内网穿透"
+            android:summary="用于外网远程访问路由器"
+            android:hint="格式：远程主机名:端口"/>
+        <CheckBoxPreference
+            android:key="penetration_https_config"
+            android:summary="与内网穿透配置的端口要对应"
+            android:title="内网穿透用HTTPS" />
+        <EditTextPreference
+            android:key="aria2_dir_config"
+            android:title="Aria2 Web目录名"
+            android:summary="用于系统构建AriaNg的访问地址"
+            android:hint="如：ariang"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="远程">
+        <Preference
+            android:key="remote_admin_watch"
+            android:title="远程后台"
+            android:summary="远程进入路由器后台"/>
+        <Preference
+            android:key="remote_file_watch"
+            android:title="远程文件"
+            android:summary="远程查看路由器挂载的硬盘文件"/>
+        <Preference
+            android:key="local_download"
+            android:title="Aria2内网下载"
+            android:summary="内网环境添加下载任务"/>
+        <Preference
+            android:key="remote_download"
+            android:title="Aria2外网下载"
+            android:summary="外网环境添加下载任务"/>
+        <Preference
+            android:key="get_bttrackerlist"
+            android:title="获取BT服务器地址"
+            android:summary="用于Aria2下载器配置BT服务器地址"/>
+    </PreferenceCategory>
+</PreferenceScreen>

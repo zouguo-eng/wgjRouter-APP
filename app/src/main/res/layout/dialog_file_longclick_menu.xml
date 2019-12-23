@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:background="#FFFFFF"
+            android:layout_centerInParent="true"
+            android:id="@+id/dialog_file_longclick_menu_lv"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:divider="@null"/>
+    </RelativeLayout>
+</LinearLayout>

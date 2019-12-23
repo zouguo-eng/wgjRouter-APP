@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/file_option_operate"
+        android:title="@string/file_option_operate"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/file_option_upload"
+        android:title="@string/file_option_upload"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/file_option_newfolder"
+        android:title="@string/file_option_newfolder"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/file_option_count"
+        android:title="@string/file_counts"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/file_option_backroot"
+        android:title="@string/file_option_backroot"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/file_option_change_router"
+        android:title="@string/change_router"
+        app:showAsAction="never"/>
+</menu>

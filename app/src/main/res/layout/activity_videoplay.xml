@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vtmFLRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <io.vov.vitamio.widget.VideoView
+        android:id="@+id/vtmVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/vtmFLTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/vtmFLTopShadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:alpha="0.1"/>
+
+        <RelativeLayout
+            android:id="@+id/vtmRLTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/vtmIVBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:src="@mipmap/back"/>
+
+            <TextView
+                android:id="@+id/vtmTVTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/vtmIVBack"
+                android:singleLine="true"
+                android:ems="15"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/vtmTVSysTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="10dp" />
+
+                <ImageView
+                    android:id="@+id/vtmIVSet"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/setplayinfo"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@id/vtmTVSysTime"/>
+
+                <ImageView
+                    android:id="@+id/vtmIVFresh"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/fresh"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@id/vtmIVSet"/>
+
+                <ImageView
+                    android:id="@+id/vtmIVCollect"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@mipmap/collect"
+                    android:padding="5dp"
+                    android:layout_toRightOf="@id/vtmIVFresh"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/vtmFLCenter"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/vtmRLCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/vtmIVBackward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/backward"/>
+            <ImageView
+                android:id="@+id/vtmIVPlayCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+            <ImageView
+                android:id="@+id/vtmIVForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/forward"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/vtmFLBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/vtmFLBottomShadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:alpha="0.1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <SeekBar
+                android:id="@+id/vtmSBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="false" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/vtmSBar">
+
+                <ImageView
+                    android:id="@+id/vtmIVPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/pausevideo"/>
+
+                <RelativeLayout
+                    android:id="@+id/lengthView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/vtmIVPlay"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/vtmTVVideoProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/vtmTVVideoProgress"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="/"
+                        android:textColor="#D8D8D8"/>
+
+                    <TextView
+                        android:id="@+id/vtmTVVideoLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="读取中..."
+                        android:textSize="15sp"
+                        android:textColor="#D8D8D8"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/vtmTVNetRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/lengthView"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="15sp"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageView
+                    android:id="@+id/vtmIVListVideo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/listvideo"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/vtmPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+</FrameLayout>

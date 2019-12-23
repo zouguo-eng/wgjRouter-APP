@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="wifi_about"
+        android:title="WiFi相关">
+        <Preference
+            android:key="wifi_setwifi"
+            android:title="WiFi密码"
+            android:summary="AP模式，修改WiFi名称及密码"/>
+        <Preference
+            android:key="wifi_repeater"
+            android:title="无线中继"
+            android:summary="AP+Sta模式，用于WiFi续命"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="router_infos"
+        android:title="路由相关">
+        <Preference
+            android:key="router_initwan"
+            android:title="外网设置"
+            android:summary="操作权限管控"/>
+        <Preference
+            android:key="router_devices"
+            android:title="接入设备"
+            android:summary="操作权限管控"/>
+        <Preference
+            android:key="router_state"
+            android:title="路由器状态"
+            android:summary="路由、产品、AP、网卡、磁盘等信息"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="router_control"
+        android:title="高级设置">
+        <Preference
+            android:key="router_shutdown"
+            android:title="关机"
+            android:summary="关机后只能手动开机"/>
+        <Preference
+            android:key="router_restore"
+            android:title="恢复出厂设置"
+            android:summary="清空所有用户配置"/>
+    </PreferenceCategory>
+</PreferenceScreen>
