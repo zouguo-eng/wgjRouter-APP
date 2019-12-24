@@ -110,7 +110,7 @@
             android:exported="false"/>
         <meta-data
             android:name="PGYER_APPID"
-            android:value="df556684a9a5f852d68088fe3704f522" >
+            android:value="XX" >
         </meta-data>
         
         <!--APP调用系统-->
